@@ -1,0 +1,44 @@
+
+{% extends 'layout.html' %}
+
+{% block page_title %}
+    S.S.S
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font: 1rem/1.5 var(--bs-font-sans-serif);
+        word-spacing: 5px;
+        backdrop-filter: blur(10px); 
+
+        background-image: url("https://cdn.pixabay.com/photo/2016/02/10/21/59/landscape-1192669_1280.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed; 
+    }
+</style>
+<div class="container mt-3">
+    <div class="row">
+        
+            <!-- Content from the SSS model -->
+            {% for sss_item in sss %}
+                <p>{{ sss_item.answer | safe }}</p>
+            {% endfor %}
+
+        
+    </div>
+</div>
+<div class="container"></div>
+<div class="container"></div>
+<div class="container"></div>
+<div class="container"></div>
+<div class="container"></div>
+
+{% endblock %}

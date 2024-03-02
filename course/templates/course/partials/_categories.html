@@ -1,0 +1,6 @@
+
+<div class="d-flex">
+    {% for category in categories %}    
+        <a href="{% url 'course_by_category' category%}" class="btn btn-light text-dark me-3 me-auto">{{category.name|title}}</a>
+    {% endfor %}
+</div>

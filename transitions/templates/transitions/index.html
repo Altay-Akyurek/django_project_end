@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block page_title %}
+    Anasayfa
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'course/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container mt-3" id="welcome-text">
+    <h1 class="display-4 text-center ">Hoşgeldiniz, {{ user.username }}</h1>
+</div>
+
+{% endif %}
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wpb_column {
+        
+        margin: 200px auto;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="wpb_column vc_column_container vc_col-sm-4">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                        <div class="wpb_wrapper">
+                            <a class="text-center d-block" href="http://127.0.0.1:8000/son_Bagisler/">
+                                <span class="far fa-address-card" style="font-size:40px; color:yellow"></span><br>
+                                <span style="font-size:20px; color:yellow">Bağış Listesi</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="wpb_column vc_column_container vc_col-sm-4">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                        <div class="wpb_wrapper">
+                            <a class="text-center d-block" href="account/create-certificate/">
+                                <span class="far fa-edit" style="font-size:40px; color:yellow"></span><br>
+                                <span style="font-size:20px; color:yellow">Bağış Yap</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="wpb_column vc_column_container vc_col-sm-4">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                        <div class="wpb_wrapper">
+                            <a class="text-center d-block" href="account/register">
+                                <span class="far fa-edit" style="font-size:40px; color:yellow"></span><br>
+                                <span style="font-size:20px; color:yellow">Bağış Yap</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <div class="wpb_column vc_column_container vc_col-sm-4">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                        <div class="wpb_wrapper">
+                            <a class="text-center d-block" href="account/change-password">
+                                <span class="fas fa-user-edit" style="font-size:40px; color:yellow"></span><br>
+                                <span style="font-size:20px; color:yellow">Kullanıcı Güncelle</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="wpb_column vc_column_container vc_col-sm-4">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                        <div class="wpb_wrapper">
+                            <a class="text-center d-block" href="account/login">
+                                <span class="fas fa-user-edit" style="font-size:40px; color:yellow "></span><br>
+                                <span style="font-size:20px; color:yellow">Kullanıcı Güncelle</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% include 'partials/_maps.html' %}
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+
+
+{% endblock %}
+{% block js_files %}
+    
+{% endblock  %}

@@ -1,0 +1,43 @@
+
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block page_title %}
+    Üyelik Sözleşmesi
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font: 1rem/1.5 var(--bs-font-sans-serif);
+        word-spacing: 5px;
+        background-image: url("https://cdn.pixabay.com/photo/2016/02/10/21/59/landscape-1192669_1280.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed; 
+        
+        
+    }
+
+</style>
+<body>
+    
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-9">
+                <!-- Content from the Uyelik model -->
+                {% for uyelik_items in uyelik %}
+                    <p>{{ uyelik_items.content | safe }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

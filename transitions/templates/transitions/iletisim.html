@@ -1,0 +1,72 @@
+<!-- iletisim.html -->
+{% extends 'layout.html' %}
+
+{% block page_title %}
+    İletişim
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font: 1rem/1.5 var(--bs-font-sans-serif);
+        word-spacing: 5px;
+        backdrop-filter: blur(10px); 
+
+        background-image: url("https://cdn.pixabay.com/photo/2014/12/17/21/55/smartphone-571961_1280.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed; 
+    }
+    label{
+        font-weight: bold; 
+    }
+    h2{
+        font-weight: bold; 
+    }
+    p{
+        font-weight: bold; 
+    }
+</style>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <h2>İletişim Bilgileri</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Adınız Soyadınız</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-Posta Adresiniz</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefonunuz</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mesajınız</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">GÖNDER</button>
+            </form>
+        </div>
+        <div class="col">
+            <h2>Adres</h2>
+            <p>Altunizade Mah. Yetimhane Sk. No: 8/3 Üsküdar – İstanbul</p>
+            <p>T: 0(216) 530 31 11</p>
+            <p>M: 0(546) 970 64 79</p>
+            <p><a href="https://wa.me/5423852046" target="_blank">Whatsapp üzerinden iletişime geçmek için tıklayınız.</a></p>
+            <p>E: bilgi@cekud.org.tr</p>
+        </div>
+    </div>
+</div>
+<div class="container"></div>
+
+{% endblock %}

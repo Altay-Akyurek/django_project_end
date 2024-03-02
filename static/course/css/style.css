@@ -1,0 +1,81 @@
+:root {
+    --bs-indigo: #6610f2;
+}
+
+body {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    font: 1rem/1.5 var(--bs-font-sans-serif);
+    word-spacing: 5px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/02/10/21/59/landscape-1192669_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    backdrop-filter: blur(5px); 
+    
+}
+
+button {
+    width: 300px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 300px;
+    outline: none;
+    background-color: #f9f9f9;
+    color: var(--bs-indigo);
+    cursor: pointer;
+}
+
+button.button2 {
+    width: 325px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #fbfbfb;
+    border-radius: 5px;
+    outline: none;
+    background-color: #85f57f;
+    color: #009f00;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+button.button2:hover {
+    background-color: #11e932;
+    color: #050605;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #090dd2af;
+    font-weight: 900;
+}
+
+table {
+    margin: 0 auto;
+    font-size: 18px;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 600px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #4ed657;
+    text-align: center;
+    background-color: #b2c7cd;
+}
+
+th {
+    background-color: #28b82a;
+}
